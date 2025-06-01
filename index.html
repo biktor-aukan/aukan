@@ -2,98 +2,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aukan – Peluquería Canina</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Helvetica Neue', sans-serif;
-            background-color: #f5f0e6;
-            color: #2c3e36;
-            line-height: 1.6;
-            padding: 0;
-        }
-        header, footer {
-            background-color: #2c3e36;
-            color: #f5f0e6;
-            text-align: center;
-            padding: 2em 1em;
-        }
-        main {
-            padding: 2em 1em;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1, h2 {
-            color: #2c3e36;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #2c3e36;
-            color: #f5f0e6;
-            padding: 0.75em 1.5em;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1em;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li::before {
-            content: "🐾 ";
-            margin-right: 0.5em;
-        }
-        .links a {
-            display: block;
-            margin: 0.5em 0;
-            color: #2c3e36;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auuukan – Peluquería Canina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f5f0e6;
+      color: #2c3e36;
+    }
+    h1, h2 {
+      font-family: 'Raleway', sans-serif;
+      color: #2c3e36;
+    }
+    .hero {
+      background-color: #2c3e36;
+      color: #f5f0e6;
+      text-align: center;
+      padding: 4em 1em;
+    }
+    .hero img {
+      max-width: 180px;
+      margin-bottom: 1em;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin: 0.3em 0;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin: 0.5em 0;
+    }
+    section {
+      max-width: 800px;
+      margin: 3em auto;
+      padding: 2em;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    section h2 {
+      font-size: 2em;
+      text-align: center;
+      margin-top: 0;
+    }
+    section hr {
+      width: 60px;
+      border: 2px solid #2c3e36;
+      margin: 0 auto 1.5em;
+    }
+    section p, section li {
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    ul li {
+      margin: 0.5em 0;
+    }
+    .contact-links p a {
+      color: #2c3e36;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer {
+      background-color: #2c3e36;
+      color: #f5f0e6;
+      text-align: center;
+      padding: 2em 1em;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <img src="logo-auukan.jpeg" alt="Logo Aukan" style="max-width: 200px; margin-bottom: 1em;">
-        <h1>Aukan – Peluquería Canina</h1>
-        <p>Bienestar, estilo y cariño para tu perro.<br>En Barcelona</p>
-        <a href="https://www.booksy.com" class="btn">Reservar cita</a>
-    </header>
+  <div class="hero">
+    <img src="logo-auukan.jpeg" alt="Logo Aukan" />
+    <h1>Bienvenidos a Auuukan</h1>
+    <p>Bienestar, estilo y cariño para tu perro.</p>
+  </div>
 
-    <main>
-        <section>
-            <h2>Sobre Aukan</h2>
-            <p>En <strong>Aukan</strong> cuidamos a tu compañero con el mismo amor con el que lo harías tú.
-               Baños, cortes y mimos en un entorno tranquilo, profesional y con mucha experiencia.</p>
-        </section>
+  <section>
+    <h2>Sobre Aukan</h2>
+    <hr />
+    <p style="text-align: center;">
+      En <strong>Aukan</strong> cuidamos de tu compañero con el mismo amor con el que lo harías tú.<br>
+      Baños, cortes y mimos en un entorno tranquilo, profesional y con experiencia.
+    </p>
+  </section>
 
-        <section>
-            <h2>Servicios</h2>
-            <ul>
-                <li>Baño y secado</li>
-                <li>Corte de raza o personalizado</li>
-                <li>Deslanado y cepillado</li>
-                <li>Higiene: uñas, oídos y glándulas</li>
-            </ul>
-        </section>
+  <section>
+    <h2>Servicios</h2>
+    <hr />
+    <ul>
+      <li>🛁 Baño y secado</li>
+      <li>✂️ Corte de raza o personalizado</li>
+      <li>🐕 Deslanado y cepillado</li>
+      <li>🧼 Higiene: uñas, oídos y glándulas</li>
+    </ul>
+  </section>
 
-        <section class="links">
-            <h2>Encuéntranos</h2>
-            <a href="https://www.instagram.com/aukan.pelucanina" target="_blank">📸 Instagram</a>
-            <a href="https://www.booksy.com" target="_blank">📅 Reservas online</a>
-            <a href="https://www.google.com/maps/place/Aukan+Peluquería+Canina" target="_blank">📍 Cómo llegar</a>
-        </section>
-    </main>
+  <section>
+    <h2>Encuéntranos</h2>
+    <hr />
+    <div class="contact-links" style="text-align: center;">
+      <p><a href="https://instagram.com/aukan.pelucanina" target="_blank">📸 Instagram</a></p>
+      <p><a href="https://www.booksy.com" target="_blank">📅 Reservas online</a></p>
+      <p><a href="https://wa.me/34614497768" target="_blank">💬 WhatsApp</a></p>
+      <p><a href="https://www.google.com/maps/place/Av+Granvía+de+l’Hospitalet+33,+08908+L’Hospitalet+de+Llobregat" target="_blank">📍 Cómo llegar</a></p>
+    </div>
+  </section>
 
-    <footer>
-        <p>© 2025 Aukan – Peluquería Canina<br>Barcelona<br>Diseñado con amor 🐾</p>
-    </footer>
+  <footer>
+    <p>© 2025 Aukan – Peluquería Canina<br>Av Granvía de l’Hospitalet 33. Local 3. 08908 Hospitalet de Llobregat<br>Diseñado con amor 🐾</p>
+  </footer>
 
 </body>
 </html>
