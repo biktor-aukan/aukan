@@ -140,6 +140,117 @@
     </ul>
   </section>
 
+  <!-- ==== SECCIÓN INSTAGRAM AUKAN ==== -->
+<section class="ig-section" aria-label="Galería de Instagram de AuuKan">
+  <h2>Últimas fotos en Instagram</h2>
+
+  <div id="ig-grid" class="ig-grid" aria-live="polite"></div>
+
+  <p class="ig-cta">
+    <a href="https://instagram.com/aukan.pelucanina" target="_blank" rel="noopener">
+      Ver más en Instagram
+    </a>
+  </p>
+</section>
+
+<!-- ==== ESTILOS DE LA GALERÍA ==== -->
+<style>
+.ig-section {
+  margin: 3rem 0;
+  text-align: center;
+}
+.ig-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.ig-grid a {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.ig-grid a:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+.ig-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 900px) {
+  .ig-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .ig-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.ig-cta {
+  margin-top: 1rem;
+}
+.ig-cta a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+.ig-cta a:hover {
+  text-decoration: underline;
+}
+</style>
+
+<!-- ==== SCRIPT PARA CARGAR LAS FOTOS ==== -->
+<script>
+(async function(){
+  try {
+    const r = await fetch("/assets/ig.json", { cache: "no-store" });
+    const { items } = await r.json();
+
+    const grid = document.getElementById("ig-grid");
+    (items || []).slice(0, 8).forEach(item => {
+      if (!item) return;
+      // Si es vídeo, usa la miniatura; si es foto, la foto
+      const imgUrl =
+        item.media_type === "VIDEO" && item.thumbnail_url
+          ? item.thumbnail_url
+          : item.media_url;
+
+      if (imgUrl) {
+        const a = document.createElement("a");
+        a.href = item.permalink;
+        a.target = "_blank";
+        a.rel = "noopener";
+
+        const img = document.createElement("img");
+        img.loading = "lazy";
+        img.alt = (item.caption || "Publicación de Instagram").slice(0, 120);
+        img.src = imgUrl;
+
+        a.appendChild(img);
+        grid.appendChild(a);
+      }
+    });
+  } catch (e) {
+    console.error("Error cargando Instagram:", e);
+    const grid = document.getElementById("ig-grid");
+    if (grid)
+      grid.innerHTML = "<p>No se pudo cargar el feed ahora mismo.</p>";
+  }
+})();
+</script>
+<!-- ==== FIN SECCIÓN INSTAGRAM ==== -->
+
   <section>
     <h2>Encuéntranos</h2>
     <hr />
