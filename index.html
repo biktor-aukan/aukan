@@ -263,6 +263,17 @@
     </div>
   </section>
 
+  <style>
+.ig-section{margin:3rem 0;text-align:center}
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:1000px;margin:0 auto}
+.ig-grid a{display:block;overflow:hidden;border-radius:10px}
+.ig-grid a::before{content:"";display:block;aspect-ratio:1/1} /* reserva espacio cuadrado */
+.ig-grid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ig-grid a{position:relative}
+@media (max-width:900px){.ig-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:600px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+
   <footer>
     <p>© 2025 Aukan – Peluquería Canina<br>Av Granvía de l’Hospitalet 33. Local 3. 08908 Hospitalet de Llobregat<br>Diseñado con amor 🐾</p>
   </footer>
