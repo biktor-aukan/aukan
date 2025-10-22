@@ -7,6 +7,23 @@
   <link rel="canonical" href="https://www.aukan.es" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet"/>
   <style>
+ <script>
+(function(){
+  const grid = document.getElementById("ig-grid");
+  if (!grid) return;
+  const demo = [
+    "https://placekitten.com/600/600",
+    "https://placekitten.com/601/601",
+    "https://placekitten.com/602/602"
+  ];
+  grid.innerHTML = demo.map(url =>
+    `<a href="https://instagram.com/aukan.pelucanina" target="_blank" rel="noopener">
+       <img loading="lazy" alt="Demo" src="${url}">
+     </a>`
+  ).join("");
+})();
+</script>
+
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
