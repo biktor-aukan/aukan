@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "media_url": "https://placekitten.com/600/600",
+      "permalink": "https://instagram.com/aukan.pelucanina",
+      "caption": "Ejemplo de foto 1",
+      "media_type": "IMAGE",
+      "timestamp": "2025-01-01T00:00:00+0000"
+    },
+    {
+      "media_url": "https://placekitten.com/601/601",
+      "permalink": "https://instagram.com/aukan.pelucanina",
+      "caption": "Ejemplo de foto 2",
+      "media_type": "IMAGE",
+      "timestamp": "2025-01-02T00:00:00+0000"
+    },
+    {
+      "media_url": "https://placekitten.com/602/602",
+      "permalink": "https://instagram.com/aukan.pelucanina",
+      "caption": "Ejemplo de foto 3",
+      "media_type": "IMAGE",
+      "timestamp": "2025-01-03T00:00:00+0000"
+    }
+  ]
+}
